@@ -3,5 +3,12 @@
          the Flutter tool needs it to communicate with the running application
          to allow setting breakpoints, to provide hot reload, etc.
     -->
+    <service
+            android:name=".java.MyFirebaseMessagingService"
+            android:exported="false">
+        <intent-filter>
+            <action android:name="com.google.firebase.MESSAGING_EVENT" />
+        </intent-filter>
+    </service>
     <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
